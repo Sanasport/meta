@@ -1,4 +1,5 @@
 <?php
+
 namespace Google\Protobuf\UninterpretedOption\Meta;
 
 use Closure;

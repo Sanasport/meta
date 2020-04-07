@@ -21,7 +21,7 @@ use Symfony\Component\Finder\SplFileInfo;
 class BaseModuleTest extends TestCase
 {
 
-	public static function setUpBeforeClass()
+	public static function setUpBeforeClass(): void
 	{
 		$files = array_map(function (SplFileInfo $file) {
 			return $file->getPathname();
@@ -68,11 +68,9 @@ class BaseModuleTest extends TestCase
 		$this->assertInstanceOf(ClassWithOneArgConstructor::class, ClassWithOneArgConstructorMeta::create("something", "else"));
 	}
 
-	/**
-	 * @expectedException \InvalidArgumentException
-	 */
 	public function testCreateClassWithOneArgConstructorThrowsZeroArg()
 	{
+		$this->expectException(\InvalidArgumentException::class);
 		ClassWithOneArgConstructorMeta::create();
 	}
 
@@ -89,19 +87,15 @@ class BaseModuleTest extends TestCase
 		$this->assertInstanceOf(ClassWithTwoArgConstructor::class, ClassWithTwoArgConstructorMeta::create("a", "b", "c", "d"));
 	}
 
-	/**
-	 * @expectedException \InvalidArgumentException
-	 */
 	public function testCreateClassWithTwoArgConstructorThrowsZeroArg()
 	{
+		$this->expectException(\InvalidArgumentException::class);
 		ClassWithTwoArgConstructorMeta::create();
 	}
 
-	/**
-	 * @expectedException \InvalidArgumentException
-	 */
 	public function testCreateClassWithTwoArgConstructorThrowsOneArg()
 	{
+		$this->expectException(\InvalidArgumentException::class);
 		ClassWithTwoArgConstructorMeta::create("a");
 	}
 

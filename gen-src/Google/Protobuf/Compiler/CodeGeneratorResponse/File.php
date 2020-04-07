@@ -1,4 +1,5 @@
 <?php
+
 namespace Google\Protobuf\Compiler\CodeGeneratorResponse;
 
 use Skrz\Meta\Protobuf\ProtobufField;

@@ -1,4 +1,5 @@
 <?php
+
 namespace Skrz\Meta\Fixtures\Protobuf;
 
 use Skrz\Meta\Fixtures\Protobuf\ClassWithEmbeddedMessageProperty\Embedded;

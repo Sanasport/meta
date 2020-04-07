@@ -1,4 +1,5 @@
 <?php
+
 namespace Google\Protobuf\FieldOptions;
 
 /**
@@ -13,5 +14,4 @@ final class CTypeEnum
 	const STRING = 0;
 	const CORD = 1;
 	const STRING_PIECE = 2;
-
 }

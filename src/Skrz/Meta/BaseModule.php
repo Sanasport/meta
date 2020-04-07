@@ -160,8 +160,8 @@ class BaseModule extends AbstractModule
 			->addComment("")
 			->addComment("@return string|void");
 		$hash->addParameter("object");
-		$hash->addParameter("algoOrCtx")->setDefaultValue("md5")->setOptional(true);
-		$hash->addParameter("raw")->setDefaultValue(false)->setOptional(true);
+		$hash->addParameter("algoOrCtx")->setDefaultValue("md5");
+		$hash->addParameter("raw")->setDefaultValue(false);
 
 		$hashProperty = $class->addProperty($hash->getName());
 		$hashProperty->setStatic(true)

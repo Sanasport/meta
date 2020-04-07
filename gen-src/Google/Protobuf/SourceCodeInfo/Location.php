@@ -1,4 +1,5 @@
 <?php
+
 namespace Google\Protobuf\SourceCodeInfo;
 
 use Skrz\Meta\Protobuf\ProtobufField;

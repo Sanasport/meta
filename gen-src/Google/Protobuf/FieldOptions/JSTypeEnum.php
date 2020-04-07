@@ -1,4 +1,5 @@
 <?php
+
 namespace Google\Protobuf\FieldOptions;
 
 /**
@@ -13,5 +14,4 @@ final class JSTypeEnum
 	const JS_NORMAL = 0;
 	const JS_STRING = 1;
 	const JS_NUMBER = 2;
-
 }

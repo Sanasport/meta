@@ -69,6 +69,8 @@ class MetaCommand extends Command
 		} else {
 			throw new \InvalidArgumentException("You have to specify either --file, or --directory option.");
 		}
+
+		return 0;
 	}
 
 }

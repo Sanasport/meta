@@ -1,4 +1,5 @@
 <?php
+
 namespace Google\Protobuf\FieldDescriptorProto;
 
 /**
@@ -28,5 +29,4 @@ final class TypeEnum
 	const TYPE_SFIXED64 = 16;
 	const TYPE_SINT32 = 17;
 	const TYPE_SINT64 = 18;
-
 }

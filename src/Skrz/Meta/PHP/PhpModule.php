@@ -174,8 +174,8 @@ class PhpModule extends AbstractModule
 			$from = $class->addMethod("from{$what}");
 			$from->setStatic(true);
 			$from->addParameter("input");
-			$from->addParameter("group")->setOptional(true);
-			$from->addParameter("object")->setOptional(true);
+			$from->addParameter("group")->setDefaultValue(null);
+			$from->addParameter("object")->setDefaultValue(null);
 
 			$from
 				->addComment("Creates \\{$type->getName()} object from " . strtolower($what))
@@ -334,8 +334,8 @@ class PhpModule extends AbstractModule
 			$to = $class->addMethod("to{$what}");
 			$to->setStatic(true);
 			$to->addParameter("object");
-			$to->addParameter("group")->setOptional(true);
-			$to->addParameter("filter")->setOptional(true);
+			$to->addParameter("group")->setDefaultValue(null);
+			$to->addParameter("filter")->setDefaultValue(null);
 
 			$to
 				->addComment("Serializes \\{$type->getName()} to " . strtolower($what))

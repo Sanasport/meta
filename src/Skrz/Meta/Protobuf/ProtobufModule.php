@@ -138,9 +138,9 @@ class ProtobufModule extends AbstractModule
 		$fromProtobuf = $class->addMethod("fromProtobuf");
 		$fromProtobuf->setStatic(true);
 		$fromProtobuf->addParameter("input");
-		$fromProtobuf->addParameter("object", null)->setOptional(true);
-		$fromProtobuf->addParameter("start", 0)->setReference(true)->setOptional(true);
-		$fromProtobuf->addParameter("end", null)->setOptional(true);
+		$fromProtobuf->addParameter("object")->setDefaultValue(null);
+		$fromProtobuf->addParameter("start")->setReference(true)->setDefaultValue(0);
+		$fromProtobuf->addParameter("end")->setDefaultValue(null);
 		$fromProtobuf
 			->addComment("Creates \\{$type->getName()} object from serialized Protocol Buffers message.")
 			->addComment("")
@@ -363,7 +363,7 @@ class ProtobufModule extends AbstractModule
 		$toProtobuf = $class->addMethod("toProtobuf");
 		$toProtobuf->setStatic(true);
 		$toProtobuf->addParameter("object");
-		$toProtobuf->addParameter("filter", null);
+		$toProtobuf->addParameter("filter")->setDefaultValue(null);
 		$toProtobuf
 			->addComment("Serialized \\{$type->getName()} to Protocol Buffers message.")
 			->addComment("")

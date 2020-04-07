@@ -1,4 +1,5 @@
 <?php
+
 namespace Google\Protobuf;
 
 use Google\Protobuf\FileOptions\OptimizeModeEnum;

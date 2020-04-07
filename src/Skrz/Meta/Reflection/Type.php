@@ -1,4 +1,5 @@
 <?php
+
 namespace Skrz\Meta\Reflection;
 
 use Doctrine\Common\Annotations\AnnotationReader;
