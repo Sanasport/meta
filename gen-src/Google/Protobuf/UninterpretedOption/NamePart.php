@@ -1,4 +1,5 @@
 <?php
+
 namespace Google\Protobuf\UninterpretedOption;
 
 use Skrz\Meta\Protobuf\ProtobufField;

@@ -1,4 +1,5 @@
 <?php
+
 namespace Google\Protobuf\FieldDescriptorProto;
 
 /**
@@ -13,5 +14,4 @@ final class LabelEnum
 	const LABEL_OPTIONAL = 1;
 	const LABEL_REQUIRED = 2;
 	const LABEL_REPEATED = 3;
-
 }

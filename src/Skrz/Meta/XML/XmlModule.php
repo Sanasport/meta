@@ -140,8 +140,8 @@ class XmlModule extends AbstractModule
 		$fromXml = $class->addMethod("fromXml");
 		$fromXml->setStatic(true);
 		$fromXml->addParameter("xml");
-		$fromXml->addParameter("group")->setOptional(true);
-		$fromXml->addParameter("object")->setOptional(true);
+		$fromXml->addParameter("group")->setDefaultValue(null);
+		$fromXml->addParameter("object")->setDefaultValue(null);
 		$fromXml
 			->addComment("Creates \\{$type->getName()} from XML")
 			->addComment("")
@@ -658,10 +658,10 @@ class XmlModule extends AbstractModule
 		$toXml = $class->addMethod("toXml");
 		$toXml->setStatic(true);
 		$toXml->addParameter("object");
-		$toXml->addParameter("group")->setOptional(true);
+		$toXml->addParameter("group")->setDefaultValue(null);
 		$toXml->addParameter("filterOrXml");
-		$toXml->addParameter("xml")->setOptional(true);
-		$toXml->addParameter("el")->setOptional(true);
+		$toXml->addParameter("xml")->setDefaultValue(null);
+		$toXml->addParameter("el")->setDefaultValue(null);
 		$toXml
 			->addComment("Serializes \\{$type->getName()} to XML")
 			->addComment("")

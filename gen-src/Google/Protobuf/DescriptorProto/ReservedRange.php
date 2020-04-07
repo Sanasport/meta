@@ -1,4 +1,5 @@
 <?php
+
 namespace Google\Protobuf\DescriptorProto;
 
 use Skrz\Meta\Protobuf\ProtobufField;

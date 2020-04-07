@@ -1,4 +1,5 @@
 <?php
+
 namespace Google\Protobuf\FileOptions;
 
 /**
@@ -15,5 +16,4 @@ final class OptimizeModeEnum
 	const SPEED = 1;
 	const CODE_SIZE = 2;
 	const LITE_RUNTIME = 3;
-
 }

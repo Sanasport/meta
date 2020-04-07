@@ -156,8 +156,7 @@ foreach ($classes as $className => $discoveryClassName) {
 	$ns->addUse($className, null, $alias);
 	$fromReflection->addParameter("reflection")
 		->setTypeHint($alias)
-		->setDefaultValue(null)
-		->setOptional(true);
+		->setDefaultValue(null);
 
 	$fromReflection
 		->addBody("if (!defined('PHP_VERSION_ID')) {")
@@ -349,8 +348,7 @@ foreach ($classes as $className => $discoveryClassName) {
 		$getter = $class->addMethod("getAnnotations");
 		$getter
 			->addParameter("annotationClassName")
-			->setDefaultValue(null)
-			->setOptional(true);
+			->setDefaultValue(null);
 		$getter
 			->addComment("@param string \$annotationClassName if supplied, returns only annotations of given class name")
 			->addComment("@return object[]");

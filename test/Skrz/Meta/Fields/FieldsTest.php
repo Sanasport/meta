@@ -191,19 +191,15 @@ class FieldsTest extends TestCase
 		$this->assertCount(0, $fields->fields("foo")->fields("bar")->fields("baz")->fields("qux"));
 	}
 
-	/**
-	 * @expectedException \InvalidArgumentException
-	 */
 	public function testFromStringNoCommaAfterRightBrace()
 	{
+		$this->expectException(\InvalidArgumentException::class);
 		Fields::fromString("foo{bar}baz");
 	}
 
-	/**
-	 * @expectedException \InvalidArgumentException
-	 */
 	public function testFromStringUnbalancedBraces()
 	{
+		$this->expectException(\InvalidArgumentException::class);
 		Fields::fromString("foo{bar");
 	}
 

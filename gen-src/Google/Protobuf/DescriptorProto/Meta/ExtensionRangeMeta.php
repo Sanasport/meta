@@ -1,4 +1,5 @@
 <?php
+
 namespace Google\Protobuf\DescriptorProto\Meta;
 
 use Closure;

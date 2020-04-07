@@ -15,7 +15,7 @@ use Symfony\Component\Finder\Finder;
 class XmlModuleTest extends TestCase
 {
 
-	public static function setUpBeforeClass()
+	public static function setUpBeforeClass(): void
 	{
 		$files = array_map(function (\SplFileInfo $file) {
 			return $file->getPathname();

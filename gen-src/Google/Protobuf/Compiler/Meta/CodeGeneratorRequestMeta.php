@@ -1,4 +1,5 @@
 <?php
+
 namespace Google\Protobuf\Compiler\Meta;
 
 use Closure;

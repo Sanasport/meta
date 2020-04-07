@@ -1,4 +1,5 @@
 <?php
+
 namespace Google\Protobuf\Compiler;
 
 use Google\Protobuf\Compiler\CodeGeneratorResponse\File;

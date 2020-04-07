@@ -25,7 +25,7 @@ use function iterator_to_array;
 class ProtobufModuleTest extends TestCase
 {
 
-	public static function setUpBeforeClass()
+	public static function setUpBeforeClass(): void
 	{
 		$files = array_values(
 			array_map(function (\SplFileInfo $file) {

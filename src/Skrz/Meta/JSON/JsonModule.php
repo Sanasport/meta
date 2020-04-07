@@ -130,8 +130,8 @@ class JsonModule extends AbstractModule
 		$fromJson = $class->addMethod("fromJson");
 		$fromJson->setStatic(true);
 		$fromJson->addParameter("json");
-		$fromJson->addParameter("group")->setOptional(true);
-		$fromJson->addParameter("object")->setOptional(true);
+		$fromJson->addParameter("group")->setDefaultValue(null);
+		$fromJson->addParameter("object")->setDefaultValue(null);
 		$fromJson
 			->addComment("Creates \\{$type->getName()} from JSON array / JSON serialized string")
 			->addComment("")
@@ -164,9 +164,9 @@ class JsonModule extends AbstractModule
 		$toJson = $class->addMethod("toJson");
 		$toJson->setStatic(true);
 		$toJson->addParameter("object");
-		$toJson->addParameter("group")->setOptional(true);
-		$toJson->addParameter("filterOrOptions")->setOptional(true);
-		$toJson->addParameter("options", 0)->setOptional(true);
+		$toJson->addParameter("group")->setDefaultValue(null);
+		$toJson->addParameter("filterOrOptions")->setDefaultValue(null);
+		$toJson->addParameter("options")->setDefaultValue(0);
 		$toJson
 			->addComment("Serializes \\{$type->getName()} to JSON string")
 			->addComment("")
@@ -191,7 +191,7 @@ class JsonModule extends AbstractModule
 		$toJsonString = $class->addMethod("toJsonString");
 		$toJsonString->setStatic(true);
 		$toJsonString->addParameter("object");
-		$toJsonString->addParameter("group")->setOptional(true);
+		$toJsonString->addParameter("group")->setDefaultValue(null);
 		$toJsonString
 			->addComment("Serializes \\{$type->getName()} to JSON string (only for BC, TO BE REMOVED)")
 			->addComment("")
@@ -210,7 +210,7 @@ class JsonModule extends AbstractModule
 		$toJsonStringPretty = $class->addMethod("toJsonStringPretty");
 		$toJsonStringPretty->setStatic(true);
 		$toJsonStringPretty->addParameter("object");
-		$toJsonStringPretty->addParameter("group")->setOptional(true);
+		$toJsonStringPretty->addParameter("group")->setDefaultValue(null);
 		$toJsonStringPretty
 			->addComment("Serializes \\{$type->getName()} to JSON pretty string (only for BC, TO BE REMOVED)")
 			->addComment("")
@@ -229,8 +229,8 @@ class JsonModule extends AbstractModule
 		$fromArrayOfJson = $class->addMethod("fromArrayOfJson");
 		$fromArrayOfJson->setStatic(true);
 		$fromArrayOfJson->addParameter("input");
-		$fromArrayOfJson->addParameter("group")->setOptional(true);
-		$fromArrayOfJson->addParameter("object")->setOptional(true);
+		$fromArrayOfJson->addParameter("group")->setDefaultValue(null);
+		$fromArrayOfJson->addParameter("object")->setDefaultValue(null);
 
 		$fromArrayOfJson
 			->addComment("Creates \\{$type->getName()} from array of JSON-serialized properties")
@@ -254,9 +254,9 @@ class JsonModule extends AbstractModule
 		$toArrayOfJson = $class->addMethod("toArrayOfJson");
 		$toArrayOfJson->setStatic(true);
 		$toArrayOfJson->addParameter("object");
-		$toArrayOfJson->addParameter("group")->setOptional(true);
-		$toArrayOfJson->addParameter("filterOrOptions", 0)->setOptional(true);
-		$toArrayOfJson->addParameter("options", 0)->setOptional(true);
+		$toArrayOfJson->addParameter("group")->setDefaultValue(null);
+		$toArrayOfJson->addParameter("filterOrOptions")->setDefaultValue(null);
+		$toArrayOfJson->addParameter("options")->setDefaultValue(0);
 		$toArrayOfJson
 			->addComment("Transforms \\{$type->getName()} into array of JSON-serialized strings")
 			->addComment("")
