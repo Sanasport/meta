@@ -658,7 +658,7 @@ class XmlModule extends AbstractModule
 		$toXml = $class->addMethod("toXml");
 		$toXml->setStatic(true);
 		$toXml->addParameter("object");
-		$toXml->addParameter("group")->setDefaultValue(null);
+		$toXml->addParameter("group");
 		$toXml->addParameter("filterOrXml");
 		$toXml->addParameter("xml")->setDefaultValue(null);
 		$toXml->addParameter("el")->setDefaultValue(null);
@@ -666,7 +666,7 @@ class XmlModule extends AbstractModule
 			->addComment("Serializes \\{$type->getName()} to XML")
 			->addComment("")
 			->addComment("@param {$typeAlias} \$object")
-			->addComment("@param string \$group")
+			->addComment("@param string|null \$group")
 			->addComment("@param array|\\XMLWriter|\\DOMDocument \$filterOrXml")
 			->addComment("@param \\XMLWriter|\\DOMDocument|\\DOMElement \$xml")
 			->addComment("@param \\DOMElement \$el")
